@@ -25,5 +25,5 @@ TIME=$1
 OUTPUT=$2
 
 # Mencoder
-mencoder tv:// -tv driver=v4l2:norm=NTSC:width=720:height=480:outfmt=uyvy:device=/dev/video0:input=0:fps=30:buffersize=1024:alsa:amode=1:forcechan=1:audiorate=48000:adevice=hw.0,0:forceaudio -msglevel mencoder=1 -ovc xvid -xvidencopts fixed_quant=5:turbo:nochroma_me:vhq=0 -oac mp3lame -vf pp=fd -endpos $1 -o "$2"
+mencoder tv:// -tv driver=v4l2:norm=NTSC:width=720:height=480:outfmt=uyvy:device=/dev/video2:input=0:fps=30:buffersize=1024:alsa:amode=1:forcechan=1:audiorate=48000:adevice=hw.2,0:forceaudio -msglevel mencoder=1 -ovc xvid -xvidencopts fixed_quant=5:turbo:nochroma_me:vhq=0 -oac mp3lame -vf pp=fd -endpos $1 -o "$2"
 
